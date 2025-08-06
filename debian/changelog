@@ -1,5 +1,26 @@
-template-repository (1.0-1) unstable; urgency=medium
+zug (0.1.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release.
+  * Update the patches:
+    - update-catch2.diff: drop, the embedded copy of doctest was dropped
+  * Update the build dependencies according to the upstream build system:
+    - add catch2
+  * Update copyright.
+  * Pass -DDISABLE_WERROR=ON to cmake to not use -Werror when building.
+  * Disable the tests for now: they assume Catch2 v2.x, and v3 requires changes.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Pino Toscano <pino@debian.org>  Sun, 15 Oct 2023 20:51:14 +0200
+
+zug (0.1.0-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * update-catch2.diff: mention https://github.com/arximboldi/zug/pull/36 that
+    will fix the issue in the long term.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 06 Aug 2023 22:04:48 +0200
+
+zug (0.1.0-1) experimental; urgency=medium
+
+  * Initial packaging.
+
+ -- Pino Toscano <pino@debian.org>  Fri, 28 Jul 2023 13:47:27 +0200
